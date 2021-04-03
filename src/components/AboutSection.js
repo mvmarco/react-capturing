@@ -1,10 +1,11 @@
 import home1 from '../img/home1.png'
 // import styled components
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import {Layout, Description, Image, Hide,} from '../styles';
 
 const AboutSection = () => {
   return (
-    <About>
+    <Layout>
       <Description>
         <div className="title">
           <Hide>
@@ -26,41 +27,13 @@ const AboutSection = () => {
         <button>Contact Us</button>
       </Description>
       <Image>
-        <img src={home1} alt="Photographer profile picure, about section" />
+        <img src={home1} alt="Photographer profile picure, About section" />
       </Image>
-    </About>
+    </Layout>
   );
 }
 
 //styled components
-const About = styled.div`
-  min-height: 90vh;
-  display: flex;
-  justify-content:space-between;
-  padding: 5rem 10rem;
-  color: #ffffff;
-`
 
-const Description = styled.div`
-  flex: 1;
-  padding-right: 5rem;
-  h2{
-    font-weight: lighter;
-  }
-`
-
-const Image = styled.div`
-  flex: 1;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-  }
-`
-
-const Hide = styled.div`
-  overflow: hidden;
-`;
-// exporting components
+// exporting component
 export default AboutSection;
