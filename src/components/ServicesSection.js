@@ -7,7 +7,7 @@ import home2 from "../img/home2.png";
 // import styled components
 import styled from 'styled-components'
 // styles
-import { Layout, Description, Image, Hide } from "../styles";
+import { Layout, Description, Image } from "../styles";
 
 const ServicesSection = () => {
   return (
