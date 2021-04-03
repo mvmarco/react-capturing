@@ -2,10 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+// react router
+import { BrowserRouter } from "react-router-dom";
+/* 
+  this basially gives us the ability to do routing. 
+  how? taking the app and wrap it inside a <BrowserRouter> tag
+*/
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
