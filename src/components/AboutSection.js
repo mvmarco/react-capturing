@@ -1,7 +1,9 @@
 import home1 from '../img/home1.png'
-// import styled components
-// import styled from 'styled-components';
+// import styled components: import styled from 'styled-components';
+// import styled components from '../styles'
 import {Layout, Description, Image, Hide,} from '../styles';
+// import framer motion
+import {motion} from 'framer-motion'
 
 const AboutSection = () => {
   return (
