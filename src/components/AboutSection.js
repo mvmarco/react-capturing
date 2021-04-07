@@ -4,7 +4,7 @@ import home1 from '../img/home1.png'
 import {Layout, Description, Image, Hide,} from '../styles';
 // import framer motion
 import {motion} from 'framer-motion'
-import {titleAnim, fade } from '../animation'
+import {titleAnim, fade, photoAnim } from '../animation'
 const AboutSection = () => {
 /*   const titleAnim = {
     hidden: {opacity: 0},
@@ -42,7 +42,7 @@ const AboutSection = () => {
         <motion.button variants={fade}>Contact Us</motion.button>
       </Description>
       <Image>
-        <img src={home1} alt="Photographer profile picure, About section" />
+        <motion.img variants={photoAnim} src={home1} alt="Photographer profile picure, About section" />
       </Image>
     </Layout>
   );
