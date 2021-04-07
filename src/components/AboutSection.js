@@ -6,30 +6,30 @@ import {Layout, Description, Image, Hide,} from '../styles';
 import {motion} from 'framer-motion'
 
 const AboutSection = () => {
-  const titleAnim = {
+/*   const titleAnim = {
     hidden: {opacity: 0},
     show: {opacity: 1, transition: { duration: 2} },
   }
   const containerAnim = {
     hidden: {x: 100},
     show: {x:0, transition: { duration: 0.75, ease: "easeOut", staggerChildren:0.75 }},
-  }
+  } */
   return (
     <Layout>
       <Description>
-        <motion.div className="title" variants={containerAnim} initial="hidden" animate="show">
+        <motion.div className="title">
           <Hide>
-            <motion.h2 variants={titleAnim}>
+            <motion.h2>
               We work to make
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>
+            <motion.h2>
               your <span>dreams</span> come{" "}
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>true.</motion.h2>
+            <motion.h2>true.</motion.h2>
           </Hide>
         </motion.div>
         <p>

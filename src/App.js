@@ -8,6 +8,8 @@ import MovieDetail from "./pages/MovieDetail";
 import GlobalStyle from './components/GlobalStyle';
 // router
 import { Switch, Route, useLocation } from "react-router-dom";
+// animation
+import {AnimatePresence} from "framer-motion"
 /* 
   we import Route, to speficy where to render the component inside ot if.
   But it does not give an exact route. If you wrote the path="/"
@@ -25,24 +27,27 @@ import { Switch, Route, useLocation } from "react-router-dom";
   a single /.
 */
 function App() {
+  const location = useLocation();
   return (
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Switch>
-        <Route exact path="/">
-          <AboutUs />
-        </Route>
-        <Route exact path="/work">
-          <OurWork />
-        </Route>
-        <Route path="/work/:id">
-          <MovieDetail/>
-        </Route>
-        <Route path="/contacts">
-          <ContactUs />
-        </Route>
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route exact path="/">
+            <AboutUs />
+          </Route>
+          <Route exact path="/work">
+            <OurWork />
+          </Route>
+          <Route path="/work/:id">
+            <MovieDetail />
+          </Route>
+          <Route path="/contacts">
+            <ContactUs />
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 }
