@@ -43,6 +43,7 @@ const Work = styled(motion.div)`
   padding: 5rem 10rem;
   h2 {
     padding: 1rem 0rem;
+    color: #ffffff;
   }
   `;
 

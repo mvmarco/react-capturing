@@ -4,7 +4,7 @@ import home1 from '../img/home1.png'
 import {Layout, Description, Image, Hide,} from '../styles';
 // import framer motion
 import {motion} from 'framer-motion'
-
+import {titleAnim} from '../animation'
 const AboutSection = () => {
 /*   const titleAnim = {
     hidden: {opacity: 0},
@@ -13,23 +13,26 @@ const AboutSection = () => {
   const containerAnim = {
     hidden: {x: 100},
     show: {x:0, transition: { duration: 0.75, ease: "easeOut", staggerChildren:0.75 }},
-  } */
+  } 
+  
+    motion.div and hide are properties that are inherited from AboutUs that "wrap" AboutSection
+  */
   return (
     <Layout>
       <Description>
         <motion.div className="title">
           <Hide>
-            <motion.h2>
+            <motion.h2 variants={titleAnim}>
               We work to make
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come{" "}
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>true.</motion.h2>
+            <motion.h2 variants={titleAnim}>true.</motion.h2>
           </Hide>
         </motion.div>
         <p>
