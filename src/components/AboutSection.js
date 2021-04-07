@@ -12,24 +12,24 @@ const AboutSection = () => {
   }
   const containerAnim = {
     hidden: {x: 100},
-    show: {x:0, transition: { duration: 0.75, ease: "easeOut"}},
+    show: {x:0, transition: { duration: 0.75, ease: "easeOut", staggerChildren:0.75 }},
   }
   return (
     <Layout>
       <Description>
         <motion.div className="title" variants={containerAnim} initial="hidden" animate="show">
           <Hide>
-            <motion.h2 variants={titleAnim} initial="hidden" animate="show">
+            <motion.h2 variants={titleAnim}>
               We work to make
             </motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come{" "}
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2 variants={titleAnim}>true.</motion.h2>
           </Hide>
         </motion.div>
         <p>
