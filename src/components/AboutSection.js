@@ -10,12 +10,18 @@ const AboutSection = () => {
     hidden: {opacity: 0},
     show: {opacity: 1, transition: { duration: 2} },
   }
+  const containerAnim = {
+    hidden: {x: 100},
+    show: {x:0, transition: { duration: 0.75, ease: "easeOut"}},
+  }
   return (
     <Layout>
       <Description>
-        <div className="title">
+        <motion.div className="title" variants={containerAnim} initial="hidden" animate="show">
           <Hide>
-            <motion.h2 variants={titleAnim} initial="hidden" animate="show">We work to make</motion.h2>
+            <motion.h2 variants={titleAnim} initial="hidden" animate="show">
+              We work to make
+            </motion.h2>
           </Hide>
           <Hide>
             <h2>
@@ -25,7 +31,7 @@ const AboutSection = () => {
           <Hide>
             <h2>true.</h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills.
