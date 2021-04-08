@@ -8,15 +8,18 @@ import goodtimes from "../img/goodtimes-small.png";
 import { Link } from "react-router-dom";
 // animations
 import {motion} from 'framer-motion';
-import {pageAnimation} from '../animation'
+import {pageAnimation, fade, photoAnim, lineAnim} from '../animation'
+
 const OurWork = () => {
   return (
     <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
       <Movie>
-        <h2>The Athlete</h2>
-        <div className="line"></div>
+        <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
-          <img src={athlete} alt="athlete movie" />
+          <Hide>
+            <img variants={photoAnim} src={athlete} alt="athlete movie" />
+          </Hide>
         </Link>
       </Movie>
       <Movie>
@@ -51,7 +54,7 @@ const Movie = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
-    background: #cccccc;
+    background: #23d997;
     margin-bottom: 3rem;
   }
   img {
@@ -59,5 +62,9 @@ const Movie = styled.div`
     height: 100vh;
     object-fit: cover;
   }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
 `;
 export default OurWork;

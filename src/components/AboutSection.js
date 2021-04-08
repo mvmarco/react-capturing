@@ -1,10 +1,12 @@
-import home1 from '../img/home1.png'
+import home1 from '../img/home1.png';
 // import styled components: import styled from 'styled-components';
 // import styled components from '../styles'
 import {Layout, Description, Image, Hide,} from '../styles';
 // import framer motion
-import {motion} from 'framer-motion'
-import {titleAnim, fade, photoAnim } from '../animation'
+import {motion} from 'framer-motion';
+import {titleAnim, fade, photoAnim } from '../animation';
+// import Wave
+import Wave from "./Wave";
 const AboutSection = () => {
 /*   const titleAnim = {
     hidden: {opacity: 0},
@@ -44,6 +46,7 @@ const AboutSection = () => {
       <Image>
         <motion.img variants={photoAnim} src={home1} alt="Photographer profile picure, About section" />
       </Image>
+      <Wave />
     </Layout>
   );
 }
