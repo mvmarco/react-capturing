@@ -4,13 +4,18 @@ import styled from "styled-components";
 import { Layout } from "../styles";
 // importing toggle component
 import Toggle from "./Toggle";
-
+// import AnimateSharedLayout, detect when our layout changes and if it did it will start an animation
+// for instance when we click a question to let it disappear the below question collapse on the higher part. We don't want that
+import {AnimateSharedLayout} from "framer-motion"
 const FaqSection = () => {
   return (
     <Faq>
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
+      <AnimateSharedLayout>
+        
+      </AnimateSharedLayout>
       <Toggle title="How Do You Start?">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
