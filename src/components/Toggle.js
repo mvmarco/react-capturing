@@ -11,7 +11,9 @@ import { useState } from "react";
   when it is false we do not show anything
 */
 const Toggle = ({ children, title }) => {
+
   const [toggle, setToggle] = useState(false);
+  
   return (
     <motion.div layout className="question" onClick={() => setToggle(!toggle)}>
       <motion.h4 layout>{title}</motion.h4>

@@ -11,9 +11,7 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <Toggle>
-        <div className="question">
-          <h4>How Do You Start?</h4>
+      <Toggle title="How Do You Start?">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
@@ -21,11 +19,8 @@ const FaqSection = () => {
               Laudantium, aut?
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
       </Toggle>
-      <div className="question">
-        <h4>Our Daily Schedule</h4>
+      <Toggle title="Our Daily Schedule?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -33,9 +28,8 @@ const FaqSection = () => {
             Laudantium, aut?
           </p>
         </div>
-        <div className="faq-line"></div>
-        <div className="question">
-          <h4>Our Payment Methods</h4>
+      </Toggle>
+      <Toggle title="Our Payment Methods">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
@@ -43,10 +37,8 @@ const FaqSection = () => {
               Laudantium, aut?
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-        <div className="question">
-          <h4>Our Products and Services</h4>
+      </Toggle>
+      <Toggle title="Our Products and Services">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
@@ -54,9 +46,7 @@ const FaqSection = () => {
               Laudantium, aut?
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-      </div>
+      </Toggle>
     </Faq>
   );
 };
