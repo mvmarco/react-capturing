@@ -5,13 +5,17 @@ import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
 // import styled components
-import styled from 'styled-components'
+import styled from 'styled-components';
 // styles
 import { Layout, Description, Image } from "../styles";
+// import UseScroll component 
+import {UseScroll} from './UseScroll';
+import {fade} from '../animation'
 
 const ServicesSection = () => {
+  const [element, controls] = UseScroll();
   return (
-    <Services>
+    <Services ref={element} variants={fade} animate={controls} initial="hidden">
       <Description>
         <h2>
           High <span>quality</span> services

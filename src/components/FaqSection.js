@@ -7,9 +7,14 @@ import Toggle from "./Toggle";
 // import AnimateSharedLayout, detect when our layout changes and if it did it will start an animation
 // for instance when we click a question to let it disappear the below question collapse on the higher part. We don't want that
 import {AnimateSharedLayout} from "framer-motion"
+// import UseScroll component 
+import {UseScroll} from './UseScroll';
+import {fade} from '../animation'
+
 const FaqSection = () => {
+  const [element, controls] = UseScroll();
   return (
-    <Faq>
+    <Faq variants={fade} ref={element} animate={controls} initial="hidden">
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
