@@ -14,44 +14,43 @@ const FaqSection = () => {
         Any Questions <span>FAQ</span>
       </h2>
       <AnimateSharedLayout>
-        
+        <Toggle title="How Do You Start?">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium, aut?
+              </p>
+            </div>
+        </Toggle>
+        <Toggle title="Our Daily Schedule?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Laudantium, aut?
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Our Payment Methods">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium, aut?
+              </p>
+            </div>
+        </Toggle>
+        <Toggle title="Our Products and Services">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium, aut?
+              </p>
+            </div>
+        </Toggle>
       </AnimateSharedLayout>
-      <Toggle title="How Do You Start?">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laudantium, aut?
-            </p>
-          </div>
-      </Toggle>
-      <Toggle title="Our Daily Schedule?">
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Laudantium, aut?
-          </p>
-        </div>
-      </Toggle>
-      <Toggle title="Our Payment Methods">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laudantium, aut?
-            </p>
-          </div>
-      </Toggle>
-      <Toggle title="Our Products and Services">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laudantium, aut?
-            </p>
-          </div>
-      </Toggle>
     </Faq>
   );
 };
