@@ -8,11 +8,24 @@ import goodtimes from "../img/goodtimes-small.png";
 import { Link } from "react-router-dom";
 // animations
 import {motion} from 'framer-motion';
-import {pageAnimation, fade, photoAnim, lineAnim} from '../animation'
+import {
+  pageAnimation,
+  fade,
+  photoAnim,
+  lineAnim,
+  slider,
+  sliderContainer,
+} from "../animation";
 
 const OurWork = () => {
   return (
     <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+      <motion.div variants={sliderContainer}> 
+        <Frame1 variants={slider}></Frame1>
+        <Frame2 variants={slider}></Frame2>
+        <Frame3 variants={slider}></Frame3>
+        <Frame4 variants={slider}></Frame4>
+      </motion.div>
       <Movie>
         <motion.h2 variants={fade}>The Athlete</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
@@ -72,19 +85,19 @@ const Hide = styled.div`
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
-  top: 10%;
+  top: 10%; // so does not cover the nav
   width: 100%;
   height: 100vh;
-  background: #fffebf;
+  background: #b4b4b4;
   z-index: 2;
 `;
 const Frame2 = styled(Frame1)`
-  background: #ff8efb;
+  background: #424546;
 `;
 const Frame3 = styled(Frame1)`
-  background: #8ed2ff;
+  background: #b4b4b4;
 `;
 const Frame4 = styled(Frame1)`
-  background: #8effa0;
+  background: #424546;
 `;
 export default OurWork;
