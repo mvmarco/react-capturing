@@ -31,7 +31,7 @@ button{
         color: white;
     }
     &:focus{
-      outline: -webkit-focus-ring-color none 1px;
+      outline: -webkit-focus-ring-color none;
     }
 }
     h2{
