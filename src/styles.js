@@ -5,9 +5,14 @@
   that may be imported to multiple components to be reused across the project.
 */
 
+// import motion so we can use it on the layout and add to it where needed a variants
+import { motion } from "framer-motion";
+
+//import styled components
 import styled from 'styled-components';
+
 //styled components
-export const Layout = styled.div`
+export const Layout = styled(motion.div)`
   min-height: 90vh;
   display: flex;
   justify-content:space-between;
