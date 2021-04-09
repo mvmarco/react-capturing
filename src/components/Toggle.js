@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { useState } from "react";
+/* 
+  children is everything inside the 
+  <Toggle>      </Toggle>
+  component in Faq section
 
+  so basically we set the state to false initially
+  by clicking the children, the state toggle gets
+  updated to true. When it is true we show the children
+  when it is false we do not show anything
+*/
 const Toggle = ({ children, title }) => {
   const [toggle, setToggle] = useState(false);
   return (
