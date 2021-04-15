@@ -5,11 +5,71 @@ import styled from 'styled-components';
 const ContactUs = () => {
   return (
     <ContactStyle variants={pageAnimation} initial="hidden" animate="show" exit="exit">
-      <h1>Contact Us</h1>
+      <Title>
+        <Hide>
+          <motion.h2 variants={titleAnim}> Get in touch</motion.h2>
+        </Hide>
+      </Title>
+      <Hide>
+        <Social variants={titleAnim}>
+          <Circle>
+          </Circle>
+          <h2>Artillerivej 73B, København S, 2300</h2>
+        </Social>
+      </Hide>
+      <Hide>
+        <Social variants={titleAnim}>
+          <Circle>
+          </Circle>
+          <h2>capture@samplemail.dk</h2>
+        </Social>
+      </Hide>
+      <Hide>
+        <Social variants={titleAnim}>
+          <Circle>
+          </Circle>
+          <h2>+45 50165178327</h2>
+        </Social>
+      </Hide>
     </ContactStyle>
   );
 };
 
 const ContactStyle = styled(motion.div)`
+  padding: 5rem 10rem;
+  min-height: 90vh;
+  background:  black;
+  @media (max-width: 1500px) {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+`;
+
+const Title = styled.div`
+  margin-bottom: 4rem;
+  color: white;
+  @media (max-width: 1500px) {
+    margin-top: 5rem;
+  }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
+
+const Social = styled(motion.div)`
+  display: flex; // this is for the Circle
+  align-items: center;
+  h2 {
+    margin: 2rem;
+    color:white;
+  }
+`;
+
+const Circle = styled.div`
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background:#23d997;
 `;
 export default ContactUs;
