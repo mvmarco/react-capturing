@@ -1,13 +1,15 @@
 // animations
 import {motion} from 'framer-motion';
-import {pageAnimation} from '../animation'
-
+import {pageAnimation, titleAnim} from '../animation';
+import styled from 'styled-components';
 const ContactUs = () => {
   return (
-    <motion.div variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+    <ContactStyle variants={pageAnimation} initial="hidden" animate="show" exit="exit">
       <h1>Contact Us</h1>
-    </motion.div>
+    </ContactStyle>
   );
 };
 
+const ContactStyle = styled(motion.div)`
+`;
 export default ContactUs;

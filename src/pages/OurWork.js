@@ -16,11 +16,12 @@ import {
   slider,
   sliderContainer,
 } from "../animation";
-import {useScroll} from '../components/useScroll';
+import { UseScroll } from "../components/UseScroll";
 
 const OurWork = () => {
-  const [element, controls] = useScroll();
-  const [element2, controls2] = useScroll();
+  const [element, controls] = UseScroll();
+  const [element2, controls2] = UseScroll();
+
   return (
     <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
       <motion.div variants={sliderContainer}> 
@@ -38,17 +39,17 @@ const OurWork = () => {
           </Hide>
         </Link>
       </Movie>
-      <Movie ref={element} variants={fade} animate={controls} initial='hidden'>
+      <Movie ref={element} variants={fade} animate={controls} initial="hidden">
         <h2>The Racer</h2>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
           <img src={theracer} alt="racer movie" />
         </Link>
       </Movie>
-      <Movie>
+      <Movie ref={element2} variants={fade} animate={controls2} initial="hidden">
         <h2>The Good Times</h2>
-        <div className="line"></div>
-        <Link to="/work/good-times">
+        <motion.div variants={lineAnim} className="line"></motion.div>
+         <Link to="/work/good-times">
           <img src={goodtimes} alt="good times movie" />
         </Link>
       </Movie>
