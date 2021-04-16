@@ -45,14 +45,14 @@ const OurWork = () => {
         <h2>The Racer</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
-          <img src={theracer} alt="racer movie" />
+          <img style={{objectPosition: "100% 5%"}} src={theracer} alt="racer movie" />
         </Link>
       </Movie>
       <Movie ref={element2} variants={fade} animate={controls2} initial="hidden">
         <h2>The Good Times</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
          <Link to="/work/good-times">
-          <img src={goodtimes} alt="good times movie" />
+          <img style={{objectPosition: "100% 55%"}} src={goodtimes} alt="good times movie" />
         </Link>
       </Movie>
       <ScrollTop />
