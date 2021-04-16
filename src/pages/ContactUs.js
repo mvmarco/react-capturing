@@ -49,6 +49,18 @@ const ContactStyle = styled(motion.div)`
     padding: 2rem 10rem;
     font-size: 1rem;
   }
+  @media (max-width: 655px) {
+    padding: 2rem 8rem;
+  }
+  @media (max-width: 583px) {
+    padding: 2rem 6rem;
+  }
+  @media (max-width: 463px) {
+    padding: 2rem 3.8rem;
+  }
+    @media (max-width: 463px) {
+    padding: 2rem 3rem;
+  }
 `;
 
 const Title = styled.div`
@@ -56,6 +68,18 @@ const Title = styled.div`
   color: white;
   @media (max-width: 1500px) {
     margin-top: 5rem;
+    font-size: 100rem;
+  }
+  @media (max-width: 860px) {
+    text-align: center;
+    h2 {
+          font-size: 3rem;
+    }
+  }
+  @media (max-width: 378px) {
+    h2 {
+      font-size: 2.5rem
+    }
   }
 `;
 
@@ -72,6 +96,31 @@ const Social = styled(motion.div)`
     font-size: 2.7rem;
     padding: 1rem 0rem;
   }
+  @media (max-width: 860px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 712px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  @media (max-width: 672px) {
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+    @media (max-width: 592px) {
+    h2 {
+      font-size: 1.2rem
+    }
+  }
+      @media (max-width: 374px) {
+    h2 {
+      font-size: 1rem
+    }
+  }
 `;
 
 const Circle = styled.div`
@@ -86,6 +135,33 @@ const Circle = styled.div`
     color: white;
     width: 1em;
     height: auto;
+  }
+  @media (max-width: 592px) {
+    width: 3.5rem;
+    height: 3.5rem;
+    .contact-icon {
+      color: white;
+      width: 0.75em;
+      height: auto;
+    }
+  }  
+  @media (max-width: 376px) {
+    width: 3.2rem;
+    height: 3.2rem;
+    .contact-icon {
+      color: white;
+      width: 0.65em;
+      height: auto;
+    }
+  }
+  @media (max-width: 363px) {
+    width: 3rem;
+    height: 3rem;
+    .contact-icon {
+      color: white;
+      width: 0.55em;
+      height: auto;
+    }
   }
 `;
 export default ContactUs;
