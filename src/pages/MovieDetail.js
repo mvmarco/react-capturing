@@ -8,6 +8,8 @@ import { MovieState } from "../movieState";
 // animations
 import {motion} from 'framer-motion';
 import {pageAnimation} from '../animation'
+// styles
+import { Hide } from "../styles";
 
 const MovieDetail = () => {
   const history = useHistory(); // info this component, like path location etc
@@ -78,6 +80,31 @@ const HeadLine = styled.div`
     top: 10%;
     left: 50%;
     transform: translate(-50%, -10%);
+  }
+  @media (max-width: 572px) {
+    h2 {
+      font-size: 3.8em;
+    }
+  }
+  @media (max-width: 498px) {
+    h2 {
+      font-size: 3.3em;
+    }
+  }
+  @media (max-width: 433px) {
+    h2 {
+      font-size: 3em;
+    }
+  }
+  @media (max-width: 393px) {
+    h2 {
+      font-size: 2.8em;
+    }
+  }
+  @media (max-width: 367px) {
+    h2 {
+      font-size: 2.3em;
+    }
   }
   img {
     width: 100%;
