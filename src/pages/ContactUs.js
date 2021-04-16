@@ -2,6 +2,9 @@
 import {motion} from 'framer-motion';
 import {pageAnimation, titleAnim} from '../animation';
 import styled from 'styled-components';
+// importing icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 const ContactUs = () => {
   return (
     <ContactStyle variants={pageAnimation} initial="hidden" animate="show" exit="exit">
@@ -13,6 +16,7 @@ const ContactUs = () => {
       <Hide>
         <Social variants={titleAnim}>
           <Circle>
+            <FontAwesomeIcon className="contact-icon" size="2x" icon={faMapMarkerAlt}/>
           </Circle>
           <h2>Artillerivej 73B, København S, 2300</h2>
         </Social>
@@ -20,6 +24,7 @@ const ContactUs = () => {
       <Hide>
         <Social variants={titleAnim}>
           <Circle>
+            <FontAwesomeIcon className="contact-icon" size="2x" icon={faEnvelope}/>
           </Circle>
           <h2>capture@samplemail.dk</h2>
         </Social>
@@ -27,6 +32,7 @@ const ContactUs = () => {
       <Hide>
         <Social variants={titleAnim}>
           <Circle>
+            <FontAwesomeIcon className="contact-icon" size="2x" icon={faPhone}/>
           </Circle>
           <h2>+45 50165178327</h2>
         </Social>
@@ -68,8 +74,16 @@ const Social = styled(motion.div)`
 
 const Circle = styled.div`
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   background:#23d997;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contact-icon {
+    color: white;
+    width: 1em;
+    height: auto;
+  }
 `;
 export default ContactUs;
