@@ -32,7 +32,7 @@ export const Description = styled.div`
   h2{
     font-weight: lighter;
   }
-    @media (max-width: 1200px) {
+    @media (max-width: 1300px) {
     padding: 0;
     button {
       margin: 2rem 0rem 5rem 0rem;

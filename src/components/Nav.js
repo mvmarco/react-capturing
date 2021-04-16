@@ -55,7 +55,7 @@ const StyledNav = styled.nav`
     flex-direction: column;
     padding: 2rem 1rem;
     #logo {
-      display: inline-block;
+      display: inline-block; // because by default is gonna be inline, a tag are inline, inline element cannot add padding and margins
       margin: 1rem;
     }
     ul {

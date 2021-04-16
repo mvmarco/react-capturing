@@ -84,6 +84,7 @@ const Services = styled(Layout)`
     width: 70%;
     padding: 2rem 0rem 4rem 0rem;
   }
+
 `;
 
 const Cards = styled.div`
