@@ -17,6 +17,9 @@ import {
   sliderContainer,
 } from "../animation";
 import { UseScroll } from "../components/UseScroll";
+// fixing scroll with this component
+import ScrollTop from "../components/ScrollTop";
+
 const OurWork = () => {
   const [element, controls] = UseScroll();
   const [element2, controls2] = UseScroll();
@@ -52,6 +55,7 @@ const OurWork = () => {
           <img src={goodtimes} alt="good times movie" />
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 }

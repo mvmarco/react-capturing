@@ -10,8 +10,8 @@ import GlobalStyle from './components/GlobalStyle';
 import { Switch, Route, useLocation } from "react-router-dom";
 // animation
 import {AnimatePresence} from "framer-motion"
-// fixing scroll with this component
-import ScrollTop from "./components/ScrollTop";
+import { useEffect } from 'react';
+
 
 /* 
   we import Route, to speficy where to render the component inside ot if.
@@ -37,10 +37,10 @@ function App() {
       window.scrollTo(0,0)
     }, 0.05);
   }  */
+
   return (
     <div className="App">
       <GlobalStyle />
-      <ScrollTop />
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>

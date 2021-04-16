@@ -46,7 +46,7 @@ const ContactStyle = styled(motion.div)`
   min-height: 90vh;
   background:  black;
   @media (max-width: 1500px) {
-    padding: 2rem;
+    padding: 2rem 10rem;
     font-size: 1rem;
   }
 `;
@@ -67,8 +67,10 @@ const Social = styled(motion.div)`
   display: flex; // this is for the Circle
   align-items: center;
   h2 {
-    margin: 2rem;
+    margin: 1rem;
     color:white;
+    font-size: 2.7rem;
+    padding: 1rem 0rem;
   }
 `;
 
