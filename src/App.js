@@ -10,6 +10,9 @@ import GlobalStyle from './components/GlobalStyle';
 import { Switch, Route, useLocation } from "react-router-dom";
 // animation
 import {AnimatePresence} from "framer-motion"
+// fixing scroll with this component
+import ScrollTop from "./components/ScrollTop";
+
 /* 
   we import Route, to speficy where to render the component inside ot if.
   But it does not give an exact route. If you wrote the path="/"
@@ -28,10 +31,16 @@ import {AnimatePresence} from "framer-motion"
 */
 function App() {
   const location = useLocation();
-
+  // adjust scroll behaviour
+/*    window.onload = function () {
+    setTimeout(() => {
+      window.scrollTo(0,0)
+    }, 0.05);
+  }  */
   return (
     <div className="App">
       <GlobalStyle />
+      <ScrollTop />
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>

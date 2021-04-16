@@ -1,7 +1,7 @@
 export const pageAnimation = {
   hidden: {
     opacity: 0,
-    y: 300
+    y: 300 // fixing reload scrolling down
   },
   show: { 
     opacity:1,
