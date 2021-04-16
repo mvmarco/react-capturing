@@ -1,7 +1,7 @@
 // import styled components
 import styled from "styled-components";
 // styles
-import { Layout } from "../styles";
+import { Layout, Hide } from "../styles";
 // importing toggle component
 import Toggle from "./Toggle";
 // import AnimateSharedLayout, detect when our layout changes and if it did it will start an animation
@@ -14,17 +14,28 @@ import {scrollReveal} from '../animation'
 const FaqSection = () => {
   const [element, controls] = UseScroll();
   return (
-    <Faq
-      variants={scrollReveal}
-      ref={element}
-      animate={controls}
-      initial="hidden"
-    >
-      <h2>
-        Any Questions <span>FAQ</span>
-      </h2>
-      <AnimateSharedLayout>
-        <Toggle title="How Do You Start?">
+    <Hide>
+
+      <Faq
+        variants={scrollReveal}
+        ref={element}
+        animate={controls}
+        initial="hidden"
+      >
+        <h2>
+          Any Questions <span>FAQ</span>
+        </h2>
+        <AnimateSharedLayout>
+          <Toggle title="How Do You Start?">
+              <div className="answer">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laudantium, aut?
+                </p>
+              </div>
+          </Toggle>
+          <Toggle title="Our Daily Schedule?">
             <div className="answer">
               <p>Lorem ipsum dolor sit amet.</p>
               <p>
@@ -32,36 +43,28 @@ const FaqSection = () => {
                 Laudantium, aut?
               </p>
             </div>
-        </Toggle>
-        <Toggle title="Our Daily Schedule?">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laudantium, aut?
-            </p>
-          </div>
-        </Toggle>
-        <Toggle title="Our Payment Methods">
-            <div className="answer">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Laudantium, aut?
-              </p>
-            </div>
-        </Toggle>
-        <Toggle title="Our Products and Services">
-            <div className="answer">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Laudantium, aut?
-              </p>
-            </div>
-        </Toggle>
-      </AnimateSharedLayout>
-    </Faq>
+          </Toggle>
+          <Toggle title="Our Payment Methods">
+              <div className="answer">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laudantium, aut?
+                </p>
+              </div>
+          </Toggle>
+          <Toggle title="Our Products and Services">
+              <div className="answer">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laudantium, aut?
+                </p>
+              </div>
+          </Toggle>
+        </AnimateSharedLayout>
+      </Faq>
+    </Hide>
   );
 };
 
@@ -91,7 +94,7 @@ const Faq = styled(Layout)`
       padding: 1rem 0rem;
     }
   }
-    @media (max-width: 1200px){
+    @media (max-width: 1300px){
     display: block;
     padding: 2rem 2rem;
     text-align: center;
