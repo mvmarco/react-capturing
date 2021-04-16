@@ -94,7 +94,7 @@ const Faq = styled(Layout)`
       padding: 1rem 0rem;
     }
   }
-    @media (max-width: 1300px){
+    @media (max-width: 1200px){
     display: block;
     padding: 2rem 2rem;
     text-align: center;
