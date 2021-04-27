@@ -1,6 +1,9 @@
 // import styled components
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
+// import motion
+import {motion} from "framer-motion";
+
 const Nav = () => {
   return (
     <StyledNav>
@@ -10,6 +13,7 @@ const Nav = () => {
       <ul>
         <li>
           <Link to="/"> 1. About Us </Link>
+          <Line/>
         </li>
         <li>
           <Link to="/work"> 2. Our Work </Link>
